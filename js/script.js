@@ -4,11 +4,24 @@ const submit = document.querySelector('#submit');
 const input = document.querySelectorAll('input');
 const formEnviado = document.querySelector('#dados');
 const form = document.querySelector('.form');
-
+const btn = document.querySelector('.btn');
+const btnBack = document.querySelector('#btn');
 
 var texto = `Obrigado por se cadastrar!`;
 var nome = input[0].value;
 var div = document.createElement('div');
+
+
+
+form.style.display = 'none';
+
+btn.addEventListener('click', function(e) {
+  e.preventDefault();
+  form.style.display = 'block';
+  btn.style.display = 'none';
+  newBtn.style.display = 'block';
+});
+
 submit.addEventListener('click', function(e) {
   e.preventDefault();
   let name = input[0].value;
@@ -21,8 +34,11 @@ submit.addEventListener('click', function(e) {
   if (name === '' || email === '' || phone === '' || adress === '' || city === '' || state === '') {
     alert('Preencha todos os campos');
   } else {
-    formEnviado.appendChild(div) + texto;
+    let name = input[0].value;
+    formEnviado.appendChild(div).innerHTML = `<p>${texto} ${name}</p>`;
     form.style.display = 'none';
+    btn.style.display = 'none';
+    newBtn.innerHTML = 'Cadastrar';
     cleanForm();
   }
   
@@ -39,7 +55,7 @@ div.style.height = "100%";
 div.style.background = "rgb(75, 80, 153)";
 div.style.color = "red";
 div.style.borderRadius = "5px";
-div.innerHTML = texto + `<br>` + `Seu nome é: ` + nome;;	
+div.innerHTML = texto + `<br>` + `Seu nome é: ` + nome;
 
 
 
