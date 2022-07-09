@@ -5,13 +5,10 @@ const input = document.querySelectorAll('input');
 const formEnviado = document.querySelector('#dados');
 const form = document.querySelector('.form');
 const btn = document.querySelector('.btn');
-const btnBack = document.querySelector('#btn');
 
 var texto = `Obrigado por se cadastrar!`;
 var nome = input[0].value;
 var div = document.createElement('div');
-
-
 
 form.style.display = 'none';
 
@@ -48,8 +45,6 @@ function cleanForm() {
     item.value = '';
   });
 };
-
-console.log(typeof(texto));
 
 div.style.height = "100%";
 div.style.background = "rgb(75, 80, 153)";
