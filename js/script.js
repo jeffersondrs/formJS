@@ -35,7 +35,6 @@ submit.addEventListener('click', function(e) {
     formEnviado.appendChild(div).innerHTML = `<p>${texto} ${name}</p>`;
     form.style.display = 'none';
     btn.style.display = 'none';
-    newBtn.innerHTML = 'Cadastrar';
     cleanForm();
   }
   
@@ -48,8 +47,11 @@ function cleanForm() {
 
 div.style.height = "100%";
 div.style.background = "rgb(75, 80, 153)";
-div.style.color = "red";
-div.style.borderRadius = "5px";
+div.style.color = "white";
+div.style.textAlign = "center";
+div.style.padding = "20px";
+div.style.width = "100%";
+div.style.borderRadius = "10px";
 div.innerHTML = texto + `<br>` + `Seu nome é: ` + nome;
 
 

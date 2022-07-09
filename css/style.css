@@ -40,6 +40,13 @@ body{
     text-transform: uppercase;
 }
 
+.btn:hover{
+    background-color: rgb(36, 36, 36);
+    color: rgb(255, 234, 234);
+    transform: scale(1.1);
+    box-shadow: rgb(255, 255, 255) 3px 1px 8px ;
+    transition: ease-in-out 0.5s;
+}
 form{
     display: flex;
     flex-direction: column;
